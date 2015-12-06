@@ -56,19 +56,19 @@ public class Trampo extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        cargoLabel = new javax.swing.JLabel();
+        cargoField = new javax.swing.JTextField();
+        setorLabel = new javax.swing.JLabel();
+        setorField = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        trabalhoLabel = new javax.swing.JLabel();
+        trabalhoField = new javax.swing.JTextField();
+        dependentesButton = new javax.swing.JButton();
+        salarioLabel = new javax.swing.JLabel();
+        salarioField = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
+        personType = new javax.swing.JComboBox();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
 
@@ -102,35 +102,40 @@ public class Trampo extends javax.swing.JFrame {
 
         jLabel10.setText("Número: ");
 
-        jLabel11.setText("Cargo: ");
-        jLabel11.setEnabled(false);
+        cargoLabel.setText("Cargo: ");
+        cargoLabel.setEnabled(false);
 
-        jTextField11.setEnabled(false);
+        cargoField.setEnabled(false);
 
-        jLabel12.setText("Setor: ");
-        jLabel12.setEnabled(false);
+        setorLabel.setText("Setor: ");
+        setorLabel.setEnabled(false);
 
-        jTextField12.setEnabled(false);
+        setorField.setEnabled(false);
 
         jLabel13.setText("Email: ");
 
-        jLabel14.setText("Carteira de Trabalho:");
-        jLabel14.setEnabled(false);
+        trabalhoLabel.setText("Carteira de Trabalho:");
+        trabalhoLabel.setEnabled(false);
 
-        jTextField14.setEnabled(false);
+        trabalhoField.setEnabled(false);
 
-        jButton1.setText("Adicionar Dependentes");
-        jButton1.setEnabled(false);
+        dependentesButton.setText("Adicionar Dependentes");
+        dependentesButton.setEnabled(false);
 
-        jLabel15.setText("Salário:");
-        jLabel15.setEnabled(false);
+        salarioLabel.setText("Salário:");
+        salarioLabel.setEnabled(false);
 
-        jTextField15.setEnabled(false);
+        salarioField.setEnabled(false);
 
         jButton2.setBackground(new java.awt.Color(0, 255, 11));
         jButton2.setText("Cadastrar");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cliente", "Funcionário", " " }));
+        personType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cliente", "Funcionário" }));
+        personType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personTypeActionPerformed(evt);
+            }
+        });
 
         jLabel16.setText("Tipo:");
 
@@ -171,20 +176,20 @@ public class Trampo extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField9))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel11)
+                                .addComponent(cargoLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cargoField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel12)
+                                .addComponent(setorLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(setorField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel14)
+                                .addComponent(trabalhoLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(trabalhoField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(22, 22, 22)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(dependentesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(40, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,9 +229,9 @@ public class Trampo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel15)
+                                .addComponent(salarioLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(salarioField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
@@ -235,7 +240,7 @@ public class Trampo extends javax.swing.JFrame {
                                 .addGap(11, 11, 11)
                                 .addComponent(jLabel16)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(personType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGap(289, 289, 289)
@@ -249,7 +254,7 @@ public class Trampo extends javax.swing.JFrame {
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(personType, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -285,10 +290,10 @@ public class Trampo extends javax.swing.JFrame {
                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cargoLabel)
+                            .addComponent(cargoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(setorLabel)
+                            .addComponent(setorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
@@ -301,15 +306,15 @@ public class Trampo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(trabalhoLabel)
+                            .addComponent(trabalhoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(salarioLabel)
+                            .addComponent(salarioField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(dependentesButton)
                         .addGap(31, 31, 31)))
                 .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                 .addContainerGap())
@@ -318,6 +323,39 @@ public class Trampo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void personTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personTypeActionPerformed
+        if(personType.getSelectedItem().toString().equals("Cliente")){
+            this.disableItens();
+        }
+        else{
+            enableItens();
+        }
+    }//GEN-LAST:event_personTypeActionPerformed
+
+    private void enableItens(){
+        salarioLabel.setEnabled(true);
+        salarioField.setEnabled(true);
+        trabalhoLabel.setEnabled(true);
+        trabalhoField.setEnabled(true);
+        setorLabel.setEnabled(true);
+        setorField.setEnabled(true);
+        cargoLabel.setEnabled(true);
+        cargoField.setEnabled(true);
+        dependentesButton.setEnabled(true);
+    }
+    
+    private void disableItens(){
+        salarioLabel.setEnabled(false);
+        salarioField.setEnabled(false);
+        trabalhoLabel.setEnabled(false);
+        trabalhoField.setEnabled(false);
+        setorLabel.setEnabled(false);
+        setorField.setEnabled(false);
+        cargoLabel.setEnabled(false);
+        cargoField.setEnabled(false);
+        dependentesButton.setEnabled(false);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -357,16 +395,13 @@ public class Trampo extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField cargoField;
+    private javax.swing.JLabel cargoLabel;
+    private javax.swing.JButton dependentesButton;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
@@ -381,11 +416,7 @@ public class Trampo extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -394,5 +425,12 @@ public class Trampo extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JComboBox personType;
+    private javax.swing.JTextField salarioField;
+    private javax.swing.JLabel salarioLabel;
+    private javax.swing.JTextField setorField;
+    private javax.swing.JLabel setorLabel;
+    private javax.swing.JTextField trabalhoField;
+    private javax.swing.JLabel trabalhoLabel;
     // End of variables declaration//GEN-END:variables
 }
