@@ -14,12 +14,12 @@ public class Pessoa {
     private String sexo;
     private String nascimento;
     private String rg;
-    private int cpf;
+    private String cpf;
     private String rua;
-    private int numero;
+    private String numero;
     private String bairro;
     private String cidade;
-    private int telefone;
+    private String telefone;
     private String email;
 
     public String getNome() {
@@ -54,11 +54,11 @@ public class Pessoa {
         this.rg = rg;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -70,11 +70,11 @@ public class Pessoa {
         this.rua = rua;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -94,11 +94,11 @@ public class Pessoa {
         this.cidade = cidade;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

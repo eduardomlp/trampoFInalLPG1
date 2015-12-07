@@ -9,7 +9,7 @@ package br.edu.ifcvideira.trampo;
  *
  * @author Eduardo Ugolini <edu.ugolini2@gmail.com>
  */
-public class Funcionario {
+public class Funcionario extends Pessoa{
     private String cargo;
     private String setor;
     private String carteiraTrabalho;
@@ -48,8 +48,8 @@ public class Funcionario {
         this.salario = salario;
     }
     
-    public void addDependentes(){
-        countDependentes++;
+    public void setDependentes(int countDependentes){
+        this.countDependentes = countDependentes;
     }
     
     public int getDependentes(){

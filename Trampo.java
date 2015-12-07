@@ -81,6 +81,7 @@ public class Trampo extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         openRegistersButton = new javax.swing.JButton();
+        tipoCliente = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -178,10 +179,15 @@ public class Trampo extends javax.swing.JFrame {
         openRegistersButton.setBackground(new java.awt.Color(0, 15, 255));
         openRegistersButton.setText("Ver Cadastros");
 
+        tipoCliente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bronze", "Prata", "Ouro", " " }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,28 +259,17 @@ public class Trampo extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(personType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addComponent(jSeparator1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(openRegistersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(salarioLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(salarioField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(dependentesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(92, 92, 92))
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(openRegistersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
+                        .addComponent(dependentesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(profissaoLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(profissaoField, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rendaLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rendaField, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(cargoLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -286,9 +281,17 @@ public class Trampo extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(trabalhoLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(trabalhoField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(trabalhoField, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(profissaoLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(profissaoField, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rendaLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rendaField, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tipoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
-            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,15 +344,17 @@ public class Trampo extends javax.swing.JFrame {
                             .addComponent(numeroField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(profissaoLabel)
                     .addComponent(profissaoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rendaLabel)
                     .addComponent(rendaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(tipoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cargoLabel)
                     .addComponent(cargoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -368,7 +373,7 @@ public class Trampo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(dependentesButton)))
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(openRegistersButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -418,8 +423,7 @@ public class Trampo extends javax.swing.JFrame {
         String cargo = "Cargo: " + cargoField.getText();
         String setor = "Setor: " + setorField.getText();
         String trabalho = "Carteira de Trabalho: " + trabalhoField.getText();
-        String salario = "Salário: " + salarioField.getText();
-        String dependentes = "Dependentes: " + dependentesCounter;        
+        String salario = "Salário: " + salarioField.getText();      
         String sexo;
         
         if(molier.isSelected()){
@@ -428,7 +432,23 @@ public class Trampo extends javax.swing.JFrame {
             sexo = "Masculino";
         }
         
-        String result = name + "; " + idade + "; " + rg + "; " + cpf + "; " + cidade + "; " + rua + "; " + bairro + "; " + numero + "; " + dependentes + "; " + sexo + "; " + cargo + "; " + setor + "; " + trabalho + "; " + salario;
+        Funcionario funcionario = new Funcionario();
+        funcionario.setNome(name);
+        funcionario.setNascimento(idade);
+        funcionario.setRg(rg);
+        funcionario.setCpf(cpf);
+        funcionario.setCidade(cidade);
+        funcionario.setRua(rua);
+        funcionario.setBairro(bairro);
+        funcionario.setNumero(numero);
+        funcionario.setCargo(cargo);
+        funcionario.setSetor(setor);
+        funcionario.setSalario(Double.parseDouble(salarioField.getText()));
+        funcionario.setDependentes(dependentesCounter);
+        funcionario.setSexo(sexo);
+        funcionario.setCarteiraTrabalho(trabalho);
+        
+        String result = tipo + "; " + name + "; " + idade + "; " + rg + "; " + cpf + "; " + cidade + "; " + rua + "; " + bairro + "; " + numero + "; Dependentes: " + funcionario.getDependentes() + "; " + sexo + "; " + cargo + "; " + setor + "; " + trabalho + "; Salário: " + funcionario.getSalario();
         
         try{
             FileManager.saveInformations(result);
@@ -447,6 +467,8 @@ public class Trampo extends javax.swing.JFrame {
         String rua = "Rua: " + ruaFIeld.getText();
         String bairro = "Bairro: " + bairroField.getText();
         String numero = "Número: " + numeroField.getText();
+        String renda = "Renda: " + rendaField.getText();
+        String profissao = "Profissão: " + profissaoField.getText();
         String dependentes = "Dependentes: " + dependentesCounter;
         String sexo;
         
@@ -456,7 +478,22 @@ public class Trampo extends javax.swing.JFrame {
             sexo = "Masculino";
         }
         
-        String result = name + "; " + idade + "; " + rg + "; " + cpf + "; " + cidade + "; " + rua + "; " + bairro + "; " + numero + "; " + dependentes + "; " + sexo;
+        Cliente cliente = new Cliente();
+        cliente.setNome(name);
+        cliente.setNascimento(idade);
+        cliente.setRg(rg);
+        cliente.setCpf(cpf);
+        cliente.setCidade(cidade);
+        cliente.setRua(rua);
+        cliente.setBairro(bairro);
+        cliente.setNumero(numero);
+        cliente.setRenda(Double.parseDouble(rendaField.getText()));
+        cliente.setProfissao(profissao);
+        cliente.setTipoCliente(tipoCliente.getSelectedItem().toString());
+        cliente.setDependentes(dependentesCounter);
+        cliente.setSexo(sexo);
+        
+        String result = name + "; " + idade + "; " + rg + "; " + cpf + "; " + cidade + "; " + rua + "; " + bairro + "; " + numero + "; " + renda + "; " + profissao + "; " + dependentes + "; " + sexo + "; Limite de crédito: " + cliente.getLimiteCredito();
         
         try{
             FileManager.saveInformations(result);
@@ -478,6 +515,7 @@ public class Trampo extends javax.swing.JFrame {
         profissaoField.setEnabled(false);
         rendaLabel.setEnabled(false);
         rendaField.setEnabled(false);
+        tipoCliente.setEnabled(false);
     }
     
     private void disableItens(){
@@ -489,10 +527,11 @@ public class Trampo extends javax.swing.JFrame {
         setorField.setEnabled(false);
         cargoLabel.setEnabled(false);
         cargoField.setEnabled(false);
-        profissaoLabel.setEnabled(false);
-        profissaoField.setEnabled(false);
-        rendaLabel.setEnabled(false);
-        rendaField.setEnabled(false);
+        profissaoLabel.setEnabled(true);
+        profissaoField.setEnabled(true);
+        rendaLabel.setEnabled(true);
+        rendaField.setEnabled(true);
+        tipoCliente.setEnabled(true);
     }
     
     /**
@@ -579,6 +618,7 @@ public class Trampo extends javax.swing.JFrame {
     private javax.swing.JLabel salarioLabel;
     private javax.swing.JTextField setorField;
     private javax.swing.JLabel setorLabel;
+    private javax.swing.JComboBox tipoCliente;
     private javax.swing.JTextField trabalhoField;
     private javax.swing.JLabel trabalhoLabel;
     // End of variables declaration//GEN-END:variables

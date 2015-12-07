@@ -14,6 +14,7 @@ public class Cliente extends Pessoa{
     private double renda;
     private double limiteCredito;
     private String tipoCliente;
+    private int countDependentes;
 
     public String getProfissao() {
         return profissao;
@@ -54,5 +55,13 @@ public class Cliente extends Pessoa{
 
     public double getLimiteCredito() {
         return limiteCredito;
+    }
+    
+    public void setDependentes(int countDependentes){
+        this.countDependentes = countDependentes;
+    }
+    
+    public int getDependentes(){
+        return countDependentes;
     }
 }

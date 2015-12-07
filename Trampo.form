@@ -37,6 +37,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jLabel17" max="32767" attributes="0"/>
+          <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
+          <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -126,31 +129,19 @@
                       <Component id="personType" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="openRegistersButton" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="salarioLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="salarioField" min="-2" pref="261" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="dependentesButton" min="-2" pref="221" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="openRegistersButton" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="profissaoLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="profissaoField" min="-2" pref="294" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rendaLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rendaField" min="-2" pref="294" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="cargoLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -165,12 +156,21 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="trabalhoField" min="-2" pref="261" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="profissaoLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="profissaoField" min="-2" pref="294" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rendaLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rendaField" min="-2" pref="294" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="tipoCliente" alignment="0" min="-2" pref="745" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
-          <Component id="jLabel17" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -235,16 +235,18 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="profissaoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="profissaoField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="rendaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="rendaField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="tipoCliente" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="cargoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cargoField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -269,7 +271,7 @@
                       <Component id="dependentesButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="registerButton" min="-2" pref="86" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="openRegistersButton" min="-2" pref="86" max="-2" attributes="0"/>
@@ -495,6 +497,18 @@
           <Color blue="ff" green="f" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ver Cadastros"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="tipoCliente">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Bronze"/>
+            <StringItem index="1" value="Prata"/>
+            <StringItem index="2" value="Ouro"/>
+            <StringItem index="3" value=" "/>
+          </StringArray>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>
