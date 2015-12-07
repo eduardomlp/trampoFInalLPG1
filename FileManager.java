@@ -10,7 +10,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -30,11 +29,10 @@ public class FileManager {
         try (BufferedWriter bw = new BufferedWriter(fw)) {
             ArrayList<String> linhas = FileManager.getInformations();
             
-            for(String linha : linhas){
-                bw.newLine();
+            bw.newLine();
+            for (String linha : linhas) {
                 bw.write(linha);
             }
-            bw.newLine();
             bw.write(content);
         }
     }

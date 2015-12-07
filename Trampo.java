@@ -5,6 +5,7 @@
  */
 package br.edu.ifcvideira.trampo;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -178,6 +179,11 @@ public class Trampo extends javax.swing.JFrame {
 
         openRegistersButton.setBackground(new java.awt.Color(0, 15, 255));
         openRegistersButton.setText("Ver Cadastros");
+        openRegistersButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openRegistersButtonActionPerformed(evt);
+            }
+        });
 
         tipoCliente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bronze", "Prata", "Ouro", " " }));
 
@@ -410,6 +416,24 @@ public class Trampo extends javax.swing.JFrame {
         dependentesCounter++;
     }//GEN-LAST:event_dependentesButtonActionPerformed
 
+    private void openRegistersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openRegistersButtonActionPerformed
+        String cadastro = "";
+        
+        try{
+            ArrayList<String> list = new ArrayList<>();
+            cadastro = "Último cadastro efetuado: \n"; 
+                    
+            list = FileManager.getInformations();
+            for (String linha : list) {
+                cadastro = cadastro + linha + "\n";
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Sem cadastros");
+        }
+        JOptionPane.showMessageDialog(null, cadastro);
+    }//GEN-LAST:event_openRegistersButtonActionPerformed
+
     private void criaFuncionario(){
         String tipo = "Tipo: " + personType.getSelectedItem().toString();
         String name = "Nome: " + nameField.getText();
@@ -448,7 +472,23 @@ public class Trampo extends javax.swing.JFrame {
         funcionario.setSexo(sexo);
         funcionario.setCarteiraTrabalho(trabalho);
         
-        String result = tipo + "; " + name + "; " + idade + "; " + rg + "; " + cpf + "; " + cidade + "; " + rua + "; " + bairro + "; " + numero + "; Dependentes: " + funcionario.getDependentes() + "; " + sexo + "; " + cargo + "; " + setor + "; " + trabalho + "; Salário: " + funcionario.getSalario();
+        String br = System.getProperty("line.separator");
+        
+        String result = tipo + br + 
+                name + br +
+                idade + br +
+                rg + br +
+                cpf + br +
+                cidade + br +
+                rua + br +
+                bairro + br +
+                numero + br + 
+                "Dependentes: " + funcionario.getDependentes() + br +
+                sexo + br +
+                cargo + br +
+                setor + br +
+                trabalho + br +
+                "Salário: " + funcionario.getSalario();
         
         try{
             FileManager.saveInformations(result);
@@ -493,7 +533,21 @@ public class Trampo extends javax.swing.JFrame {
         cliente.setDependentes(dependentesCounter);
         cliente.setSexo(sexo);
         
-        String result = name + "; " + idade + "; " + rg + "; " + cpf + "; " + cidade + "; " + rua + "; " + bairro + "; " + numero + "; " + renda + "; " + profissao + "; " + dependentes + "; " + sexo + "; Limite de crédito: " + cliente.getLimiteCredito();
+        String br = System.getProperty("line.separator");
+        
+        String result = name + br +
+                idade + br +
+                rg + br +
+                cpf + br +
+                cidade + br +
+                rua + br +
+                bairro + br +
+                numero + br +
+                renda + br +
+                profissao + br +
+                dependentes + br +
+                sexo + br + 
+                "Limite de crédito: " + cliente.getLimiteCredito();
         
         try{
             FileManager.saveInformations(result);
